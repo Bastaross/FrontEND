@@ -10,7 +10,7 @@ form.addEventListener('submit', async (e) => {
 
     try {
         // Appeler l'API pour récupérer les données de l'utilisateur
-        const response = await fetch(`http://localhost:3000/user/${userId}`);
+        const response = await fetch(`https://backend-8wom.onrender.com/user/${userId}`);
         
         if (response.ok) {
             const user = await response.json();
@@ -27,7 +27,7 @@ form.addEventListener('submit', async (e) => {
 
 showuserbutton.addEventListener('click', async () => {
     try{
-        const response = await fetch('http://localhost:3000/users');
+        const response = await fetch('https://backend-8wom.onrender.com/users');
         if (response.ok) {
             const users = await response.json();
             resultDiv.innerHTML = `
